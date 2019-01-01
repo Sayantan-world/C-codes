@@ -8,6 +8,65 @@ DATE : 01.01.2019
 #include <ctype.h> // isdigit() isalpha() etc
 #define MAX_LIMIT 20 
 /* ************************************OTHER FUNCTIONS INVOLVED************************************  */
+int ball_game()
+{
+     printf("\n      Game Description: U can choose 1 or 2 balls in each turn\n");
+     printf("\n      The computer also gets a turn after u choose... it also chooses 1 or 2 balls\n");
+     printf("\n      One who has to pick the last ball left looses the game :D\n");
+     int numSticks = 21;
+     int numToTake = 0;int q=0;
+
+     while (numSticks > 0) 
+     {
+       q=0;
+         printf("\n      Balls remaining  =  %d \n" , numSticks);
+         printf("      ");
+         for(q=1;q<=numSticks;q++)
+         {
+             printf("O ");
+         }
+         printf("\n");
+         printf("\n      How many balls you choose ( 1 or 2) : ");
+         scanf("%d", &numToTake);
+
+         if (numToTake > 2)
+         {
+           numToTake = 2;
+
+         }
+
+         else if (numToTake < 1)
+         {
+           numToTake = 1;
+         }
+         numSticks = numSticks - numToTake;
+
+         if (numSticks <= 0) 
+         {
+           printf("\n      SORRY ,YOU LOST :(  KEEP TRYING \n");
+         }
+         else {
+
+           if((numSticks - 2) % 3 == 0 || numSticks - 2 == 0)
+           {
+             numToTake = 1;
+           }
+           else
+           {
+             numToTake = 2;
+           }
+           printf("\n      The computer takes %d ball(s)\n" , numToTake);
+           numSticks = numSticks - numToTake;
+
+           if (numSticks <= 0)
+           {
+             printf("\n     CONGRATS!!!!!...... U CRACKED MY CODE ;)\n");
+           }
+         }
+          }
+
+ }//END OF 21 BALL GAME
+ /*---------------------------------------------------------------------------------------------------------------------------------------------*/
 int guessing_game()
         {
                     int iRandomNum = 0;int guess;
@@ -83,7 +142,8 @@ int main()
             printf("\n      Press 1 to play GUESSING GAME\n"); 
             printf("\n      Press 2 to play ADDITION GAME\n"); 
             printf("\n      Press 3 to play MULTIPLICATION GAME\n");
-            printf("\n      Press 4 to QUIT\n");
+            printf("\n      Press 4 to play 21 BALL GAME\n");
+            printf("\n      Press 5 to QUIT\n");
             printf("\n      ************************************************************\n"); 
             printf("\n      ENTER YOUR CHOICE : ");
             scanf("%d", &choice);
@@ -102,6 +162,10 @@ int main()
                     mul_game();break;
                 }
                 case 4:
+                {
+                    ball_game();break;
+                }                
+                case 5:
                 {
                     printf("\n      THANK YOU SO MUCH FOR TRYING THESE OUT .... HAVE A NICE DAY :)\n");exit(0);
                 }
