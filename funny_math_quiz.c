@@ -13,110 +13,110 @@ NOTE : GAME 5 ONLY WORKS ON WINDOWS , IF U RUN IT IN LINUX PLEASE  REPLACE  "cls
 /*---------------------------------------------------CONCENTRATION GAME---------------------------------------------------------------------*/
 int conc_game()
 {
-char cYesNo = '\0';
-int iResp[10];//user input array
-int iElaspedTime = 0;
-int iCurrentTime = 0;
-int iRandomNum = 0;
-int iNum[10];//random generated array
-int iCounter = 0;
-int i=0,j=0,score=0;
-srand(time(NULL));
-while(i<=9)
-{
-j=0;
+    char cYesNo = '\0';
+    int iResp[10];//user input array
+    int iElaspedTime = 0;
+    int iCurrentTime = 0;
+    int iRandomNum = 0;
+    int iNum[10];//random generated array
+    int iCounter = 0;
+    int i=0,j=0,score=0;
+    srand(time(NULL));
+    while(i<=9)
+    {
+        j=0;
 /*Random numbers generated and stored in array for a certain level*/
-while(j<=i)
-{
-iNum[j] = rand() % 100;
-j+=1;
-}
+        while(j<=i)
+        {
+            iNum[j] = rand() % 100;
+            j+=1;
+        }
 /*--------------------------------------*/
 /*Displaying the generated numbers*/
-printf("\n      Concentrate on the numbers (LVL %d):  \n",(i+1));
-j=0;
-printf("\n      ");
-while(j<=i)
-{
-printf("%d ",iNum[j]);j+=1;
-}
-iCurrentTime = time(NULL);
-do {
-iElaspedTime = time(NULL);
-} while ( (iElaspedTime - iCurrentTime) < (i+3) ); //end do while loop
-system ("cls");//Clearing the screen
-printf("\n      Enter each number separated with one space: ");
-switch(i+1)
-{
-case 1:
-{
-scanf("%d", &iResp[0]);break;
-}
-case 2:
-{
-scanf("%d%d", &iResp[0],&iResp[1]);break;
-}
-case 3:
-{
-scanf("%d%d%d", &iResp[0],&iResp[1],&iResp[2]);break;
-}
-case 4:
-{
-scanf("%d%d%d%d", &iResp[0],&iResp[1],&iResp[2],&iResp[3]);break;
-}
-case 5:
-{
-scanf("%d%d%d%d%d", &iResp[0],&iResp[1],&iResp[2],&iResp[3],&iResp[4]);break;
-}
-case 6:
-{
-scanf("%d%d%d%d%d%d", &iResp[0],&iResp[1],&iResp[2],&iResp[3],&iResp[4],&iResp[5]);break;
-}
-case 7:
-{
-scanf("%d%d%d%d%d%d%d", &iResp[0],&iResp[1],&iResp[2],&iResp[3],&iResp[4],&iResp[5],&iResp[6]);break;
-}
-case 8:
-{
-scanf("%d%d%d%d%d%d%d%d", &iResp[0],&iResp[1],&iResp[2],&iResp[3],&iResp[4],&iResp[5],&iResp[6],&iResp[7]);break;
-}
-case 9:
-{
-scanf("%d%d%d%d%d%d%d%d%d", &iResp[0],&iResp[1],&iResp[2],&iResp[3],&iResp[4],&iResp[5],&iResp[6],&iResp[7],&iResp[8]);break;
-}
-case 10:
-{
-scanf("%d%d%d%d%d%d%d%d%d%d", &iResp[0],&iResp[1],&iResp[2],&iResp[3],&iResp[4],&iResp[5],&iResp[6],&iResp[7],&iResp[8],&iResp[9]);break;
-}
-}
-j=0;int flag=0;
-while(j<=i)
-{
-if(iNum[j]==iResp[j])
-{
-    flag=1;
-}
-else
-{
-    flag=0;break;
-}
-j+=1;
-}
-j=0;
-if(flag==1)
-{printf("\n      Congratulations! U passed level %d\n",(i+1));score+=1;}
-if(flag==0)
-{
-printf("\n      Sorry :(  correct numbers were : ");
-while(j<=i)
-{
-printf("%d ",iNum[j]);j+=1;
-}
-printf("\n\n      YOUR MEMORIZATION ABILITY IS %d/100\n",(score*10));
-break;
-}
-i+=1;
-}
+    printf("\n      Concentrate on the numbers (LVL %d):  \n",(i+1));
+    j=0;
+    printf("\n      ");
+    while(j<=i)
+    {
+        printf("%d ",iNum[j]);j+=1;
+    }
+    iCurrentTime = time(NULL);
+    do {
+    iElaspedTime = time(NULL);
+    } while ( (iElaspedTime - iCurrentTime) < (i+3) ); //end do while loop
+    system ("cls");//Clearing the screen
+    printf("\n      Enter each number separated with one space: ");
+    switch(i+1)
+    {
+        case 1:
+        {
+            scanf("%d", &iResp[0]);break;
+        }
+        case 2:
+        {
+            scanf("%d%d", &iResp[0],&iResp[1]);break;
+        }
+        case 3:
+        {
+            scanf("%d%d%d", &iResp[0],&iResp[1],&iResp[2]);break;
+        }
+        case 4:
+        {
+            scanf("%d%d%d%d", &iResp[0],&iResp[1],&iResp[2],&iResp[3]);break;
+        }
+        case 5:
+        {
+            scanf("%d%d%d%d%d", &iResp[0],&iResp[1],&iResp[2],&iResp[3],&iResp[4]);break;
+        }
+        case 6:
+        {
+            scanf("%d%d%d%d%d%d", &iResp[0],&iResp[1],&iResp[2],&iResp[3],&iResp[4],&iResp[5]);break;
+        }
+        case 7:
+        {
+            scanf("%d%d%d%d%d%d%d", &iResp[0],&iResp[1],&iResp[2],&iResp[3],&iResp[4],&iResp[5],&iResp[6]);break;
+        }
+        case 8:
+        {
+            scanf("%d%d%d%d%d%d%d%d", &iResp[0],&iResp[1],&iResp[2],&iResp[3],&iResp[4],&iResp[5],&iResp[6],&iResp[7]);break;
+        }
+        case 9:
+        {
+            scanf("%d%d%d%d%d%d%d%d%d", &iResp[0],&iResp[1],&iResp[2],&iResp[3],&iResp[4],&iResp[5],&iResp[6],&iResp[7],&iResp[8]);break;
+        }
+        case 10:
+        {
+            scanf("%d%d%d%d%d%d%d%d%d%d", &iResp[0],&iResp[1],&iResp[2],&iResp[3],&iResp[4],&iResp[5],&iResp[6],&iResp[7],&iResp[8],&iResp[9]);break;
+        }
+    }
+    j=0;int flag=0;
+    while(j<=i)
+    {
+        if(iNum[j]==iResp[j])
+        {
+            flag=1;
+        }
+        else
+        {
+            flag=0;break;
+        }
+        j+=1;
+    }
+    j=0;
+    if(flag==1)
+    {printf("\n      Congratulations! U passed level %d\n",(i+1));score+=1;}
+    if(flag==0)
+    {
+        printf("\n      Sorry :(  correct numbers were : ");
+        while(j<=i)
+        {
+            printf("%d ",iNum[j]);j+=1;
+        }
+        printf("\n\n      YOUR MEMORIZATION ABILITY IS %d/100\n",(score*10));
+        break;
+    }
+    i+=1;
+    }
 }//END OF CONCENTRATION GAME
 
 /*--------------------------------21 BALL GAME------------------------------------------------------------------------------------------------------*/
