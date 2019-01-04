@@ -1,7 +1,7 @@
 /*
 AUTHOR : Sayantan Pal
 DATE : 04.01.2019
-NOTE : GAME 5 ONLY WORKS ON WINDOWS , IF U RUN IT IN LINUX PLEASE  REPLACE  "cls" with  "clear"  IN LINE 50
+NOTE : GAME 5 ONLY WORKS ON WINDOWS , IF U RUN IT IN LINUX PLEASE  REPLACE  "cls" with  "clear"  IN LINE 47
 */
 #include <stdio.h> //standard input output
 #include <stdlib.h> //standard libs
