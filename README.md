@@ -11,6 +11,11 @@ Project 1 :Fun With Maths -------
 5.  CONCENTRATION GAME 
 ************************************************************************
 
-Project 2 : Tic Tac Toe
+Project 2 : Tic Tac Toe (Game)
 
 ************************************************************************
+
+Project 3 : Ultra Factorial (Able to calculate factorial of big numbers)
+
+************************************************************************
+
