@@ -4,6 +4,12 @@ Adding simple basic C codes which are fun--
 ***********************************************************************
 Project 1 :Fun With Maths -------(Wont work in windows unless u have Ansi escape code support)
 
+Link for Ansicon : http://adoxa.altervista.org/ansicon/
+
+download the zip and extract the required folders in your (C:>windows:>) 
+open cmd and run this command ->   ansicon -i 
+now you are good to run "fun_with_math"
+
 1.  GUESSING GAME
 2.  ADDITION GAME
 3.  MULTIPLICATION GAME
