@@ -2,7 +2,7 @@
 Adding simple basic C codes which are fun--
 
 ***********************************************************************
-Project 1 :Fun With Maths -------
+Project 1 :Fun With Maths -------(Wont work in windows unless u have Ansi escape code support)
 
 1.  GUESSING GAME
 2.  ADDITION GAME
