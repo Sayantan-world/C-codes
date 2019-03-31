@@ -25,7 +25,7 @@ Project 3 : Ultra Factorial (Able to calculate factorial of big numbers)
 
 ************************************************************************
 
-Snippet 4 : Scanf function - Shows how it actally works
+Snippet 4 : Scanf function - Shows how it actually works
 
 ************************************************************************
 
