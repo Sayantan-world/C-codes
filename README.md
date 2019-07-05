@@ -1,5 +1,4 @@
 # C-codes
-Adding simple basic C codes which are fun--
 
 ***********************************************************************
 Project 1 :Fun With Maths -------(Wont work in windows unless u have Ansi escape code support)
