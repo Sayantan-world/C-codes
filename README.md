@@ -28,3 +28,6 @@ Snippet 4 : Scanf function - Shows how it actually works
 
 ************************************************************************
 
+Snippet 5 : Data types - Shows size of various data types
+
+************************************************************************
